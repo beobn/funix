@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 15.6.1</title>
+</head>
+<body>
+    <script>
+        var data = {
+            name : 'Mark ',
+            weight: 78,
+            height: 1.69
+        };
+        var data1 = {
+            name : 'John ',
+            weight: 92,
+            height: 1.95
+        };
+        var data2 = {
+            name : 'Mark ',
+            weight: 95,
+            height: 1.88
+        };
+        var data3 = {
+            name : 'John ',
+            weight: 85,
+            height: 1.76
+        };
+        let BMI = data.weight / data.height*data.height
+        let BMI1 = data1.weight / data1.height*data1.height
+        let BMI2 = data2.weight / data2.height*data2.height
+        let BMI3 = data3.weight / data3.height*data3.height
+        let markHigherBMI = true;
+        if(Math.max(BMI, BMI1, BMI2, BMI3)==BMI || Math.max(BMI, BMI1, BMI2, BMI3)==BMI2){
+            markHigherBMI=true;
+            console.log("Mark's BMI is higher than John's!");
+        }else{
+            markHigherBMI=false;
+            console.log("John's BMI is higher than Mark's!");
+        }
+    </script>
+</body>
+</html>

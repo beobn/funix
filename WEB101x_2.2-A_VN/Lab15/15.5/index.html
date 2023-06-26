@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 15.5</title>
+</head>
+<body>
+    <label for="">Chọn quốc gia bạn muốn xem thông tin
+        <select name="countrys" id="countrys" onchange="getbio()">
+            <option value=""></option>
+            <option value="vn">Việt Nam</option>
+            <option value="jp">Nhật Bản</option>
+        </select>
+    </label>
+    <script>
+       
+        let country='';
+        let continent = 'Châu Á';
+        let population;
+        let isIsland;
+        const language = 'Tiếng Việt';
+        
+        function getbio() {
+            let countrys = document.getElementById("countrys").value;
+            if(countrys == 'vn'){
+                country = 'Việt Nam';
+                population = 97.47;
+                isIsland = false;
+                
+            }else if(countrys == 'jp'){
+                country = 'Nhật Bản'
+                population = 125.7;
+                isIsland = true
+
+            }
+            alert(
+             ' Đất nước : '+country
+            +'\n Châu lục : '+ continent
+            +'\n dân số : '+ population + ' triệu dân ' + (population > 33 ? country+"'s population is above average": country+"'s population is"+ (33-population)+ "million below average ")
+            +'\n Giá trị của dân số khi chia 2 : '+ population/2 + ' triệu dân'
+            +'\n Giá trị của dân số khi thêm 1 : '+ (population+1) + ' triệu dân'
+            +'\n Giá trị của dân so với Phần Lan (6 triệu người) : '+ (population < 6 ?"thấp hơn":"cao hơn")
+            +'\n Giá trị của dân so với dân số trung bình của 1 quốc gia (33 triệu người) : '+ (population < 33 ?"thấp hơn":"cao hơn")
+            +'\n Là hòn đảo :'+isIsland
+            +'\n Ngôn ngữ : '+language
+        )
+        }
+        
+    </script>
+</body>
+</html>

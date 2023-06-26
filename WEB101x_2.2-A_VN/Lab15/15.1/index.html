@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 15.1</title>
+</head>
+<body>
+    <label for="">Chọn quốc gia bạn muốn xem thông tin
+        <select name="countrys" id="countrys" onchange="getbio()">
+            <option value=""></option>
+            <option value="vn">Việt Nam</option>
+            <option value="jp">Nhật Bản</option>
+        </select>
+    </label>
+    <script>
+       
+        let country='';
+        let continent = 'Châu Á';
+        let population;
+        let isIsland;
+        let language;
+        function getbio() {
+            let countrys = document.getElementById("countrys").value;
+            if(countrys == 'vn'){
+                country = 'Việt Nam';
+                population = 97.47;
+                isIsland = false;
+            }else if(countrys == 'jp'){
+                country = 'Nhật Bản'
+                population = 125.7;
+                isIsland = true
+            }
+            alert(
+             ' Đất nước : '+country
+            +'\n Châu lục : '+ continent
+            +'\n dân số : '+ population + ' triệu dân'
+            +'\n Là hòn đảo :'+isIsland
+            +'\n Ngôn ngữ : '+language
+        )
+        }
+        
+    </script>
+</body>
+</html>

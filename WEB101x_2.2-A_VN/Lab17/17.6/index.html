@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 17.6</title>
+</head>
+<body>
+    <script>
+        var neighbours =['Lào','Campuchia','Trung Quốc']
+        neighbours.push('neighbours');
+        console.log(neighbours);
+        neighbours.pop();
+        console.log(neighbours);
+        if(neighbours.includes('Germany') == false){
+            console.log('Probably not a central European country :D');
+        }
+        console.log(neighbours);
+        if(neighbours.indexOf('Lào')!=-1){
+            neighbours[neighbours.indexOf('Lào')]='Republic of Lao'
+        }
+        console.log(neighbours);
+        
+    </script>
+</body>
+</html>

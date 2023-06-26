@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lap 16.4</title>
+    
+</head>
+<body>
+    <select name="" id="language" onchange="language()">
+        <option value="0"></option>
+        <option value="1">Chinese or Mandarin</option>
+        <option value="2">Spanish</option>
+        <option value="3">English</option>
+        <option value="4">Hindi</option>
+        <option value="5">Arabic</option>
+    </select>
+    <p id="mess"></p>
+    <script>
+        function language(){
+            let check = document.getElementById("language").value;
+            let mess;
+            switch(check){
+                case '1': mess = 'MOST number of native speakers!'; break;
+                case '2': mess = '2nd place in number of native speakers'; break;
+                case '3': mess = '3rd place'; break;
+                case '4': mess = 'Number 4'; break;
+                case '5': mess = '5th most spoken language'; break;
+                default : mess ='Great language too :D'
+            }
+            document.getElementById('mess').innerHTML= mess;
+        }
+    </script>
+</body>
+</html>

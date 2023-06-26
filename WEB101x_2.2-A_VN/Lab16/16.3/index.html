@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <p>Bạn muốn tìm đất nước?</p>
+
+    <button onclick="myFunction()">Tìm</button>
+
+    <p id="demo"></p>
+
+    <script>
+        let language;
+        let population;
+        let island;
+        function inputData() {
+
+        }
+        function myFunction() {
+            language = prompt("Nhập ngôn ngữ mà bạn muốn", "Tiếng Anh");
+            population = prompt("Nhập dân số mà bạn muốn (triệu người)", 49);
+            island = prompt("đất nước bạn muốn có phải hải đảo không", "Không");
+            if (language == "Tiếng Anh") {
+                if (population < 50) {
+                    if (island == "Không") {
+                        document.getElementById("demo").innerHTML =
+                            "You should live in Portugal :)";
+                    }
+                    else {
+                        document.getElementById("demo").innerHTML =
+                            "Portugal does not meet your criteria :(";
+                    }
+                } else {
+                    document.getElementById("demo").innerHTML =
+                        "Portugal does not meet your criteria :(";
+                }
+            } else {
+                document.getElementById("demo").innerHTML =
+                    "Portugal does not meet your criteria :(";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

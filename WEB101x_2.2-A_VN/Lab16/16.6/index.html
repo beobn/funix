@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16.6
+    </title>
+</head>
+
+<body>
+    <h2>So sánh kết quả thi đấu</h2>
+    Kết quả của Dolphins: <br><br>
+    <label for="">
+        Kết Quả lần 1: <input type="number" id="Dp1">
+    </label>
+    <label for="">
+        Kết Quả lần 2: <input type="number" id="Dp2">
+    </label>
+    <label for="">
+        Kết Quả lần 3: <input type="number" id="Dp3">
+    </label>
+    <br> <br>
+    Kết quả của Koalas: <br><br>
+    <label for="">
+        Kết Quả lần 1: <input type="number" id="Kl1">
+    </label>
+    <label for="">
+        Kết Quả lần 2: <input type="number" id="Kl2">
+    </label>
+    <label for="">
+        Kết Quả lần 3: <input type="number" id="Kl3">
+    </label>
+    <br> <br>
+
+    <button onclick="run()">So sánh</button>
+    <br> <br><br> <br>
+     <h2>tip calculator</h2>
+     <label for="">
+        Nhập hóa đơn: <input type="number" id="tip">
+    </label>
+    <br> <br>
+
+    <button onclick="tip()">Tính típ</button>
+
+    <script>
+        let Dolphins = [];
+        let Koalas = [];
+
+        function run() {
+            console.log("hi");
+            Dolphins = new Array(document.getElementById('Dp1').value, document.getElementById('Dp2').value, document.getElementById('Dp3').value);
+            Koalas = new Array (document.getElementById('Kl1').value, document.getElementById('Kl2').value, document.getElementById('Kl3').value);
+            if(Dolphins[0]<100 || Dolphins[1]<100 || Dolphins[2]<100){
+                alert('Điểm của Dolphins bị nhập sai hãy nhập nó lớn hơn 100')
+            }else if( Koalas[0]<100 ||Koalas[1]<100 ||Koalas[2]<100){
+                alert('Điểm của Koalas bị nhập sai hãy nhập nó lớn hơn 100')
+            }else{
+                let sumDolphins = 0;
+                let sumKoalas = 0;
+                for (const a of Dolphins) {
+                    sumDolphins += a;
+                }
+                for (const a of Koalas) {
+                    sumKoalas += a;
+                }
+                let avgDolphins = sumDolphins/Dolphins.length;
+                let avgKoalas = sumKoalas/Koalas.length;
+                if(avgDolphins < avgKoalas){
+                    console.log('Dolphins nhỏ hơn Koalas');
+                }else if(avgDolphins == avgKoalas){
+                    console.log('Dolphins bằng Koalas');
+                }else{console.log('Dolphins lớn hơn Koalas');}
+            }
+           
+        }
+
+        function tip(){
+            let bill = document.getElementById('tip').value;
+            let tip = bill >=50 ? bill*15/100 : bill<= 300 ? bill*15/100 : bill*20/100;
+            let sum = new Number(bill) + new Number(tip)
+            alert('The bill was '+ bill +', the tip was ' +tip+ ', and the total value '+ sum)
+        }
+    </script>
+</body>
+
+</html>
