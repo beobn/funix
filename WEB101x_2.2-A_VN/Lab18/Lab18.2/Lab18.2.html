@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 18.2</title>
+</head>
+<body>
+
+    <script>
+        const myCountry={
+            country:"Việt Nam",
+            capital:"Hà Nội",
+            language:"Tiếng Việt",
+            population:"97.47",
+            neighbours:['Lào','Campuchia']
+        } 
+        console.log(myCountry.country+" có " + myCountry.population + " triệu người nói "+ myCountry.language+", " + myCountry.neighbours.length + " nước láng giềng và thủ đô "+myCountry.capital)
+
+        let population1=new Number(myCountry.population)+new Number(2)
+        let population2=new Number(myCountry['population'])-new Number(2)
+        console.log("Tăng dân số thêm 2 triệu người : " +  population1 +" triệu người")
+        console.log("Tăng dân số giảm 2 triệu người : " +  population2 +" triệu người")
+    </script>
+    
+</body>
+</html>

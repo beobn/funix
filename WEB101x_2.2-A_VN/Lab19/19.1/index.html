@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab19.1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trò chơi đoán số</h1>
+
+  <p>Chọn 1 số từ 1 - 20:</p>
+  <input type="number" id="guessInput">
+  <button onclick="checkGuess()">Submit</button>
+
+  <p id="message"></p>
+
+  <script>
+    // Generate a random number between 1 and 20
+    const randomNumber = Math.floor(Math.random() * 20) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      // Get the user's guess
+      const guessInput = document.getElementById("guessInput");
+      const guess = parseInt(guessInput.value);
+
+      // Validate the guess
+      if (isNaN(guess) || guess < 1 || guess > 20) {
+        setMessage("Vui lòng nhập một số hợp lệ từ 1 đến 20.");
+        return;
+      }
+
+      // Increase the number of attempts
+      attempts++;
+
+      // Check if the guess is correct
+      if (guess === randomNumber) {
+        setMessage(`Chúc mừng! Bạn đoán số ${randomNumber} chính xác trong ${attempts} lần.`);
+        document.body.style.background='green';
+      } else if (guess < randomNumber) {
+        setMessage("Đoán một số cao hơn.");
+        document.body.style.background='red';
+      } else {
+        setMessage("Đoán một số thấp hơn.");
+        document.body.style.background='red';
+      }
+
+      // Clear the input field
+      guessInput.value = "";
+    }
+
+    function setMessage(msg) {
+      const message = document.getElementById("message");
+      message.textContent = msg;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 18.3</title>
+</head>
+<body>
+
+    <script>
+        const myCountry={
+            country:"Việt Nam",
+            capital:"Hà Nội",
+            language:"Tiếng Việt",
+            population:"97.47",
+            neighbours:['Lào','Campuchia'],
+            describe:function(){
+                return this.country+" có " + this.population + " triệu người nói "+ this.language+", " + this.neighbours + " nước láng giềng và thủ đô "+this.capital
+            },
+            checkIsland : function(){
+                if(this.neighbours.length==0){
+                    return this.isIsland= true;
+                }else return this.isIsland=false;
+            }
+        } 
+        console.log(myCountry.describe())
+        console.log(myCountry.checkIsland())
+
+    
+    </script>
+    
+</body>
+</html>

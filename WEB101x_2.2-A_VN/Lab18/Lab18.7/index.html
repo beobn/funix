@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 18.7</title>
+</head>
+<body>
+    <script>
+        var percentages2 = [123,24,523,12]
+        function percentageOfWorld2(population) {
+             return (population/7900*100).toFixed(1)
+        }
+        let index=0;
+        while(index<percentages2.length){
+            console.log('Đất nước này có phần trăm dân số = '+percentageOfWorld2(percentages2[index])+'%');
+            index++;
+        }
+        for(var i = 0; i < percentages2.length; i++) {
+            console.log('Đất nước này có phần trăm dân số = '+percentageOfWorld2(percentages2[i])+'%');
+        }
+    </script>
+</body>
+</html>

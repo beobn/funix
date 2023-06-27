@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 18.8</title>
+</head>
+<body>
+    <h2>tip calculator</h2>
+     <label for="" id="tip">
+        Nhập hóa đơn:<br> <input type="number" name="bill" ><br>
+    </label>
+    <br><button onclick="addbills()" >Thêm hóa đơn</button><br>
+    
+    <br><button onclick="calcTip()">in hóa đơn</button>
+    <br><button onclick="calcAverage()">tính trung bình</button>
+    <br> <br>
+    <script>
+        const MarkMiller={
+            fullname:'Mark Miller',
+            mass:'78',
+            height:'1.69',
+            calcBMI:function(){
+                return this.BMI= this.mass/[(this.height)^2] 
+            }
+        };
+        const JohnSmith={
+            fullname:'John Smith',
+            mass:'92',
+            height:'1.95',
+            calcBMI:function(){
+                return this.BMI= this.mass/[(this.height)^2] 
+            }
+        };
+
+        console.log(MarkMiller.calcBMI()>JohnSmith.calcBMI()?
+         "Mark's BMI ("+MarkMiller.calcBMI()+") is higher than John's ("+JohnSmith.calcBMI()+")!":
+         "John's BMI ("+JohnSmith.calcBMI()+") is higher than Mark's ("+MarkMiller.calcBMI()+")!");
+
+         function addbills() {
+            const ins = document.getElementById("tip");
+            let html = "<br><input type='number' name='bill'><br>";
+            ins.insertAdjacentHTML("beforeend", html);
+        }
+        function calcTip() {
+             let bills=[];
+             let tip=[];
+             document.getElementsByName("bill").forEach(element => {
+                bills.push(element.value)
+             });
+             bills.forEach(element => {
+                tip.push( element >=50 ? element*15/100 : element<= 300 ? element*15/100 : element*20/100)
+             })
+             let total = bills.reduce((a, b) => new Number(a) + new Number(b), 0)+ tip.reduce((a, b) => new Number(a) + new Number(b), 0)
+             console.log(total);
+
+        }
+        function calcAverage(){
+            let sum = new Number(0);
+            let bills=[];
+            document.getElementsByName("bill").forEach(element => {
+                bills.push(element.value)
+             });
+            for (let i = 0; i < bills.length; i++) {
+                sum+=new Number(bills[i]);
+            }
+            console.log(sum/bills.length);
+        }
+
+
+    </script>
+</body>
+</html>
