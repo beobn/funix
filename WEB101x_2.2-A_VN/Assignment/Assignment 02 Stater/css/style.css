@@ -70,10 +70,9 @@ section > .container{
 }
 .grid-job-info {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    
+    grid-template-columns: 33% 33% 33%;
     padding: 10px;
-    column-gap:50px;
+    column-gap:10px;
     row-gap:50px;
 }
 .grid-info {
@@ -83,9 +82,6 @@ section > .container{
     grid-template-columns: 75% 25%;
     padding: 20px 0px 50px 20px;
 }
-.grid-info > div {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
   .item3 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -182,13 +178,6 @@ section > .container{
     
 }
 #footer div ul li span{
-    /* background-color: #0084ff; */
-    /* width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    text-align: center; */
     font-size: 25px;
     color: #0084ff
 }
@@ -196,4 +185,28 @@ section > .container{
     font-size: 20px;
     margin-top: 3px;
     color: #0084ff;
+}
+.buttonBlue{
+    background-color: #005eff; 
+    color: white;
+    border-radius: 20px; 
+    padding: 0px 10px;
+}
+.job-info p{
+    padding: 10px
+}
+.grid-job{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 80px auto;
+    
+}
+.job-info h3{
+    margin:10px ;
+}
+.borDer{
+    border: 1px solid gray;
+}
+.borDer div{
+    margin: 5px;
 }
