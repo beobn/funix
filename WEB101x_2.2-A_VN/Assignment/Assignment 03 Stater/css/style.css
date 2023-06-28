@@ -1,0 +1,257 @@
+* {
+    margin: 0px;
+}
+
+.bg-grey {
+    background: #f7f7f7;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+section > .container{
+    width: 100%;
+    margin: auto;
+    display: block;
+
+    padding: 30px 50px;
+}
+
+#nav-bar {
+    text-align: center;
+    overflow: hidden;
+    
+    
+}
+#nav-bar a {
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    margin-left: -5px;
+    height: 100%;
+  }
+#banner div{
+    position: absolute;
+    padding-top: 10%;
+    
+}
+#banner img{
+    
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+     
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0px 0 0 0 ;
+    padding: 0px 0px 0px 0px ;
+    width: 100%;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+#target{
+    padding: 20px 20px 20px 20px;
+    background-color: #f7f7f7;
+}
+#about h1{
+    margin-bottom: 20px;
+}
+#personal-info{
+    padding: 20px 20px 20px 20px;
+    background-color: #ebebeb;
+}
+#personal-info ul{
+
+    list-style: none;
+    padding-inline-start: 0px;
+}
+.grid-job-info {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 10px;
+    column-gap:10px;
+    row-gap:50px;
+}
+.grid-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(177, 177, 177, 0.8);
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 20px 0px 50px 20px;
+}
+  .item3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .inFo {
+    margin-top: 20px;
+    position: relative;
+    background-color: inherit;
+    width: 91%;
+}
+
+.inFo div{
+    display: inline-block;
+    vertical-align: top;
+    
+}
+.inFo div h3{
+    margin: 0px 20px;
+    
+}
+.inFo div p{
+    margin: 0px 20px;
+}
+.inFotime{
+    padding: 10px 0;
+}
+.iconLike p{
+    padding-left: 5px;
+    color: #0084ff;
+    font-size: 30px;
+}
+.item2{
+    font-size: 30px;
+}
+.box {
+    display: flex;
+    flex-direction: row;
+}
+.box-item{
+    padding: 10px;
+}
+.box span{
+    margin-top: 5px;
+    width: 70px;
+    height: 3px;
+    background-color: #0084ff;
+    margin-right: 5px;
+}
+.skill{
+    margin-top:15px;
+}
+
+.grid-certificate {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+  }
+.grid-item-certificate {
+    padding: 20px;
+    
+
+}
+.grid-item-certificate img{
+    width: 374px;
+    height: 186px;
+}
+.grid-item-certificate div{
+    padding-left: 10px;
+}
+.grid-item-certificate div h4{
+    margin-bottom:15px;
+}
+#footer div ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+#footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer div ul li{
+    display: flex;
+    margin-left: 10px;
+    
+}
+#footer div ul li span{
+    font-size: 25px;
+    color: #0084ff
+}
+#footer div ul li p{
+    font-size: 20px;
+    margin-top: 3px;
+    color: #0084ff;
+}
+.buttonBlue{
+    background-color: #005eff; 
+    color: white;
+    border-radius: 20px; 
+    padding: 0px 10px;
+    text-align: center;
+}
+.job-info p{
+    margin: 10px;
+}
+.grid-job{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto;
+    
+}
+.job-info h3{
+    margin:10px ;
+}
+.borDer{
+    border: 1px solid gray;
+}
+.borDer div{
+    margin: 5px;
+}
+.iconLike p{
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #005eff;
+    padding: 0.5em 0.6em;
+    font-size:30px;
+}
+.item1 span{
+    margin-left: 8%;
+    /* background-color: #fff38c; */
+    padding: 8px;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+.info_1:hover .item1 span{
+    visibility: visible;
+    background-color: #fff38c;
+}
+.info_2:hover .item1 span{
+    visibility: visible;
+    background-color: #fff38c;
+}
+
+.info_3:hover .item1 span{
+    visibility: visible;
+    background-color: #fff38c;
+}
+
+.info_4:hover .item1 span{
+    visibility: visible;
+    background-color: #fff38c;
+}
+
+.info_5:hover .item1 span{
+    visibility: visible;
+    background-color: #fff38c;
+}
+
+.info_6:hover .item1 span{
+    visibility: visible;
+    background-color: #fff38c;
+}
+
