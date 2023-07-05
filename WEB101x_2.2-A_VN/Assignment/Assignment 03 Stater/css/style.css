@@ -229,6 +229,7 @@ section > .container{
 .info_1:hover .item1 span{
     visibility: visible;
     background-color: #fff38c;
+    cursor: pointer;
 }
 .info_2:hover .item1 span{
     visibility: visible;

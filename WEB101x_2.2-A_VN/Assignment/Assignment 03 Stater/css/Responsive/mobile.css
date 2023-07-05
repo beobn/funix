@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px) {
+    #nav-bar ul li {
+        width: 100%;
+        float: left;
+    }
+    .grid-info{
+        width: 100%;
+        float: left;
+    }
+    #target{
+        width: 100%;
+        float: left;
+    }
+    .container .row{
+        flex-direction: column;
+    }
+  }

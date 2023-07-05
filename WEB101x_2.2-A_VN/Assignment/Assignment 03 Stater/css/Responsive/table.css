@@ -1,0 +1,5 @@
+@media screen and (max-width: 992px) {
+    #job-info .row div{
+        width: 50%;
+    }
+}
